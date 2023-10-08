@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GoEco</title>
+    <!-- Include the external CSS file -->
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body class="bg-green-100">
+    <div class="container mx-auto py-8">
+        <h1 class="text-3xl text-center mb-6">Locator Web App</h1>
+        
+        <!-- Location Search Input -->
+        <div class="flex justify-center mb-4">
+            <input
+                id="locationInput"
+                class="w-96 px-4 py-2 rounded-full border border-green-400 focus:outline-none focus:border-green-500"
+                type="text"
+                placeholder="Enter a location..."
+            />
+            <button id="geolocationButton" class="ml-2 px-4 py-2 bg-green-500 text-white rounded-full focus:outline-none">
+                Use My Location
+            </button>
+        </div>
+
+        <!-- Fuel Consumption Display -->
+        <div id="fuelConsumption" class="bg-white p-4 rounded-lg mt-4 shadow-md">
+            <h2 class="text-lg font-semibold">Fuel Consumption per Kilometer</h2>
+            <div class="mt-2">
+                <label for="estimatedFuel" class="block font-semibold">Estimated Fuel (L):</label>
+                <input
+                    id="estimatedFuel"
+                    type="number"
+                    min="0"
+                    step="0.01"
+                    class="w-full px-2 py-1 border rounded-md focus:outline-none"
+                />
+            </div>
+            <p class="mt-2" id="fuelConsumptionResult">Fuel Consumption: N/A L/km</p>
+        </div>
+
+        <!-- Travel Mode Selection -->
+        <div class="flex justify-center mb-4">
+            <select id="travelModeSelect" class="w-96 px-4 py-2 rounded-full border border-green-400 focus:outline-none focus:border-green-500">
+                <option value="driving">Driving</option>
+                <option value="walking">Walking</option>
+                <option value="bicycling">Bicycling</option>
+            </select>
+        </div>
+
+        <!-- Map Container -->
+        <div id="map" class="w-full h-80 rounded-lg shadow-lg"></div>
+
+        <!-- Distance and Directions Display -->
+        <div id="info" class="mt-6">
+            <p class="text-center font-semibold">Distance: <span id="distance"></span></p>
+            <p class="text-center font-semibold mt-2">Directions:</p>
+            <ol id="directions" class="list-decimal list-inside"></ol>
+        </div>
+    </div>
+
+    <!-- Include the external JavaScript file -->
+    <script src="app.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"></script>
+</body>
+</html>
