@@ -1,7 +1,27 @@
-
-/* Custom CSS for styling */
-.pastel-green {
-    background-color: #A2FF9D;
+/* Styles for the body, background, and buttons */
+body {
+    background-image: url('C:\\Users\\user\\Downloads\\colored-city-map-with-information\\2981189.jpg');
+    background-size: cover; /* Adjust as needed */
+    background-repeat: no-repeat; /* Adjust as needed */
+    background-attachment: fixed; /* Adjust as needed */
 }
 
-/* Additional custom styles can be added here */
+.home-button,
+.bg-green-button {
+    background-color: #77dd77; /* Pastel green color */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.home-button a,
+.bg-green-button a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+/* Additional styles can be added here */
+

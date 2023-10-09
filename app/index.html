@@ -4,12 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GoEco</title>
-    <!-- Include the external CSS file -->
+    
+    <!-- Link the external CSS file -->
     <link href="styles.css" rel="stylesheet">
 </head>
-<body class="bg-green-100">
+<body>
     <div class="container mx-auto py-8">
-        <h1 class="text-3xl text-center mb-6">Locator Web App</h1>
+        <h1 class="text-3xl text-center mb-6">GoEco</h1>
         
         <!-- Location Search Input -->
         <div class="flex justify-center mb-4">
@@ -57,6 +58,11 @@
             <p class="text-center font-semibold">Distance: <span id="distance"></span></p>
             <p class="text-center font-semibold mt-2">Directions:</p>
             <ol id="directions" class="list-decimal list-inside"></ol>
+        </div>
+
+        <!-- Home button -->
+        <div id="homeButton" class="bg-green-button">
+            <a href="index.html">Home</a>
         </div>
     </div>
 
